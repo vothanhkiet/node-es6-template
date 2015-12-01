@@ -1,0 +1,14 @@
+uncruise:
+    build: .
+    working_dir: /src/app
+    command: sh -c "npm install && bower --config.analytics=false --allow-root install && nodemon --debug=6000 server.js"
+    volumes:
+        - .:/src/app
+    expose:
+        - "5858"
+        - "3000"
+    ports:
+        - "5858:6000"
+        - "8080:3000"
+    env_file:
+        - uncruise.env
