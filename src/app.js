@@ -1,6 +1,7 @@
 /**
  * Created by kiettv on 01/12/2015.
  */
+'use strict';
 import express from 'express';
 import path from 'path';
 import favicon from 'serve-favicon';
